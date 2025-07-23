@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사진으로 선택하는 여행 예약</title>
+    <style>
+        body {
+            font-family: '맑은 고딕', Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            padding: 30px 38px 38px 38px;
+        }
+        h1 {
+            color: #228b22;
+            text-align: center;
+        }
+        .photo-options {
+            display: flex;
+            gap: 22px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .photo-option {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 12px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: border 0.3s;
+            background: #fafbfa;
+            position: relative;
+            min-width: 155px;
+        }
+        .photo-option.selected {
+            border: 2px solid #228b22;
+            background: #e0ffe0;
+        }
+        .photo-option img {
+            width: 120px;
+            height: 90px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .option-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            font-size: 16px;
+            padding: 8px;
+            margin-bottom: 17px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background: #228b22;
+            color: #fff;
+            padding: 13px 0;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        button:hover {
+            background: #206b16;
+        }
+        @media (max-width: 540px) {
+            .photo-options {
+                flex-direction: column;
+                gap: 14px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>여행 예약 (사진으로 여행지 선택)</h1>
+        <form>
+            <label for="destination">여행지 선택</label>
+            <div class="photo-options" id="photoOptions">
+                <label class="photo-option">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="파리">
+                    <div class="option-label-row">
+                        <input type="radio" name="destination" value="파리" required>
+                        <span>파리</span>
+                    </div>
+                </label>
+                <label class="photo-option">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="도쿄">
+                    <div class="option-label-row">
+                        <input type="radio" name="destination" value="도쿄">
+                        <span>도쿄</span>
+                    </div>
+                </label>
+                <label class="photo-option">
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=400&q=80" alt="시드니">
+                    <div class="option-label-row">
+                        <input type="radio" name="destination" value="시드니">
+                       시드니
+                    </div>
+                </label>
+            </div>
+            
+            <label for="name">예약자 성함</label>
+            <input type="text" id="name" name="name" required placeholder="성함">
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required placeholder="이메일">
+
+            <label for="date">여행 출발일</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">예약 신청</button>
+        </form>
+    </div>
+    <script>
+        // 선택된 사진에 강조 테두리 주기
+        const options = document.querySelectorAll('.photo-option input[type="radio"]');
+        options.forEach(option => {
+            option.addEventListener('change', function() {
+                document.querySelectorAll('.photo-option').forEach(div => div.classList.remove('selected'));
+                this.closest('.photo-option').classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
