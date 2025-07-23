@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+   <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <!-- 스타일시트 -->
+        <link rel="stylesheet" href="style.css">
+</head>
+<div id="container">
+    <h1 class="Header">회원가입</h1>
+    <hr>
+    <p>회원가입을 위해 아래 정보를 입력해주세요.</p>
+    <p class="bstr">입력된 정보와 실제가 다를 경우 불이익 발생할수 있습니다.</p>
+
+    <form action="#">
+        <ul>
+            <fieldset>
+                <li class="group">
+                    <label for="userid">
+                        <i class="fa-solid fa-id-card"></i>
+                        아이디</label>
+                    <input type="text" id="userid" name="userid" autofocus required>
+                </li>
+                <li class="group">
+                    <label for="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        이메일</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </li>
+
+                <li class="group">
+                    <label for="password">
+                        <i class="fa-solid fa-lock"></i>
+                        비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </li>
+                <li class="group">
+                    <label for="password2">
+                        <i class="fa-solid fa-lock"></i>
+                        비밀번호 확인</label>
+                    <input type="password" id="password2" name="password2" required>
+                </li>
+            </fieldset>
+            <fieldset>
+                <li class="group">
+                    <label for="name">
+                        <i class="fa-solid fa-user"></i>
+                        이름</label>
+                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                </li>
+                <li class="group">
+                    <label for="date">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        생년월일</label>
+                    <input type="date" id="date" name="date">
+                </li>
+                <li class="group">
+                    <label for="phone">
+                        <i class="fa-solid fa-mobile"></i>
+                        전화번호</label>
+                    <input type="tel" id="phone" name="phone" placeholder=" 하이픈 빼고 입력해 주세요.(01012345678)" required>
+                </li>
+                <li>
+                    <label for="gender">
+                        <i class="fa-solid fa-person-half-dress"></i>
+                        성별</label>
+                    <input type="radio" name="gender" value="male">
+                    남성
+                    </label>
+                    <input type="radio" name="gender" value="ㄹㄷmale">
+
+                    여성
+                    </label>
+                </li>
+            </fieldset>
+            <li class="group">
+                <label for="intro">
+                    <i class="fa-solid fa-face-laugh"></i>
+                    간단한 자기소개</label>
+                <textarea id="intro" rows="4" cols="50" name="intro" placeholder="자기소개을 입력하세요"></textarea>
+            </li>
+            <li class="group">
+                <label for="file">
+                    <i class="fa-solid fa-file"></i>
+                    파일 첨부</label>
+                <input type="file" id="file" name="file">
+            </li>
+        </ul>
+        <button type="submit" class="sign">
+            <i class="fa-solid fa-circle-check"></i>
+            가입하기
+        </button>
+        <button type="reset" class="cancel">
+            <i class="fa-solid fa-ban"></i>
+            취소하기
+        </button>
+    </form>
+</div>
+</body>
+
+</html>

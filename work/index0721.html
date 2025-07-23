@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>훈련 찾기</title>
+     <style>
+    #container {
+      width: 600px;
+      margin: 10px auto;
+
+    }
+
+    /* ul{
+      list-style-type: none;
+    } */
+  </style>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div id="container">
+    <form>
+        <fieldset>
+            <h1>국비 지원 훈련찾기</h1>
+
+            <ul>
+                <li>
+                    <label for="g_search">검색어</label>
+                    <input type="text" id="g_search">
+                </li>
+                <li>
+                                        <label for="g_name">기관명</label>
+                    <input type="text" id="g_name">
+                </li>
+                <li>
+                 <label for="g_area">지역</label>
+            <select id="g_area">
+            <option value="emty" >지역선택 </option>
+              <option value="blog" >서울 </option>
+              <option value="search">경기 </option>
+              <option value="sns">충청도 </option>
+              <option value="etc">기타 </option>
+            </select>
+                </li>
+                 <li>
+          <label for="d-day">개강 일자</label>
+          <input type="date" id="d-day" min=""> <small>(익일부터)</small>
+
+        </li>
+            </ul>
+            <input type="submit" value="찾기">
+
+
+        </fieldset>
+    </form>
+    
+</body>
+
+</html>

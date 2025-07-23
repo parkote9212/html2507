@@ -1,0 +1,97 @@
+     /* 배경이미지   */
+     body {
+            background-image: url('./ch07/images/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed
+        }
+/* 순서없는항목 */
+        ul {
+            width: 100%;
+            list-style: none;
+            padding: 0;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+
+        .group {
+            width: 95%;
+            margin-bottom: 10px;
+
+        }
+
+        .group label {
+            display: block;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            color: #333;
+
+        }
+
+        .group label:hover {
+            text-decoration: underline;
+        }
+
+
+
+        .group>input,
+        textarea {
+            width: 100%;
+            padding: 8px 0px 8px 10px;
+            ;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .sign {
+            width: 46%;
+            padding: 10px;
+            background: gray;
+            color: #fff;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .sign:hover {
+            background: #2e59d9;
+        }
+
+        .cancel {
+            width: 48%;
+            padding: 10px;
+            background: gray;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .cancel:hover {
+            background: #ff0000;
+        }
+
+        .Header {
+            text-align: center;
+            text-shadow: 1px 1px 1px #ffa500;
+        }
+
+        .bstr {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            color: #ff0000;
+        }
+
+        #container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+        }
+ 
