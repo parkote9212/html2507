@@ -35,12 +35,14 @@ body {
 
 .top {
     background-color: #fff;
+    width: 100%;
     max-width: 900px;
     margin: 20px auto 0 auto;
     
 }
 
 header {
+    width: 100%;
     max-width: 900px;
     background-color: #24292f;
     color: white;
@@ -51,19 +53,42 @@ header {
     text-align: center;
     box-sizing: border-box;
 
+    
+}
+
+header.positioned{
+     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
 }
 
 .navi {
+    width: 100%;
     max-width: 900px;
+    margin: 0 auto;
     display: flex;
     list-style: none;
     background-color: #24292f;
     border-bottom: 1px solid #d1d1d1;
-    margin: 0 auto;
     padding: 0;
     text-align: center;
     box-sizing: border-box;
 }
+
+nav.positioned{
+    position: fixed;
+    top: 175px; 
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+
 
 .navi li {
     flex: 1;
@@ -93,8 +118,9 @@ header {
 
 .container {
     background-color: #fff;
+    width: 100%;
     max-width: 900px;
-    margin: 0px auto;
+    margin: 240px auto;
     text-align: center;
     padding: 50px;
     box-sizing: border-box;
@@ -158,3 +184,4 @@ a:focus {
     color: #ff9800;
     letter-spacing: 0.5px;
 }
+
