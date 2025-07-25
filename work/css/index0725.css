@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+    padding: 0;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-rows: 100px 100px 1fr 100px;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "aside_left main aside_right"
+        "footer footer footer";
+
+}
+
+.header {
+    display: flex;
+    grid-area: header;
+    background: #4177f6;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+
+    display: flex;
+    grid-area: nav;
+    background: #a7c7e7;
+    justify-content: center;
+}
+
+.aside_left {
+    display: flex;
+    grid-area: aside_left;
+    background: #dcedc8;
+    justify-content: center;
+}
+
+.main {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+    background: #fffcec;
+}
+
+.aside_right {
+
+    display: flex;
+    grid-area: aside_right;
+    background: #ffd6e0;
+    justify-content: center;
+}
+
+.footer {
+
+    display: flex;
+    grid-area: footer;
+    background: #222;
+    color: #fff;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+
+    .aside_left,
+    .aside_right {
+        display: none;
+    }
+    .grid_container {
+        display: grid;
+        grid-template-rows: 100px 100px 1fr 100px;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-areas:
+            "header header header"  
+            "nav nav nav"
+            "main main main"
+            "footer footer footer";
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+
+    .aside_right {
+        display: none;
+    }
+
+    .grid_container {
+        display: grid;
+        grid-template-rows: 100px 100px 1fr 100px;
+        grid-template-columns: 150px 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "aside_left main main"
+            "footer footer footer";
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        background-color: green;
+    }
+}
