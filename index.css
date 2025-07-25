@@ -1,103 +1,68 @@
-@media (max-width: 900px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        font-size: 15px;
-    }
-
-    .navi a {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        font-size: 13px;
-    }
-
-    .navi a {
-        font-size: 13px;
-    }
+/* 글로벌 스타일 */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #232323;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 20px;
-    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
-    background-size: cover;
     font-size: 18px;
+    min-height: 100%;
 }
 
-.top {
-    background-color: #fff;
+#main-header {
+    background: #24292f;
+    color: #fff;
     width: 100%;
     max-width: 900px;
-    margin: 20px auto 0 auto;
-    
-}
-
-header {
-    width: 100%;
-    max-width: 900px;
-    background-color: #24292f;
-    color: white;
     margin: 0 auto;
+    padding: 18px 5vw 10px 5vw;
     border-radius: 10px 10px 0 0;
-    padding: 15px;
-
-    text-align: center;
     box-sizing: border-box;
-
-    
-}
-
-header.positioned{
-     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-     position: fixed;
+    text-align: center;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
+}
+
+#main-nav {
+    background: #24292f;
+    width: 100%;
+    height: 50px;
+    max-width: 900px;
+    margin: 0 auto;
     box-sizing: border-box;
+    border-bottom: 1px solid #d1d1d1;
+    position: fixed;
+    top: 156px;
+    left: 0;
+    right: 0;
+    z-index: 900;
 }
 
 .navi {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
     list-style: none;
-    background-color: #24292f;
-    
-    border-bottom: 1px solid #d1d1d1;
+    display: flex;
+    margin: 0;
     padding: 0;
-    text-align: center;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
 }
-
-nav.positioned{
-    position: fixed;
-    top: 173px; 
-    left: 0;
-    right: 0;
-    box-sizing: border-box;
-}
-
-
 
 .navi li {
+    height: 100%;
     flex: 1;
-    text-align: center;
-    border-top: 1px solid #d1d1d1;
-
     border-right: 1px solid #d1d1d1;
-
+    text-align: center;
 }
 
 .navi li:last-child {
@@ -105,8 +70,10 @@ nav.positioned{
 }
 
 .navi a {
-    display: block;
-    padding: 14px 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -117,26 +84,37 @@ nav.positioned{
     background-color: #eee;
     color: #1976d2;
     border-radius: 4px;
+    outline: none;
 }
 
+/* 메인 컨테이너 */
 .container {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.95);
     width: 100%;
     max-width: 900px;
-    margin: 239px auto;
-    text-align: center;
-    padding: 50px;
+    margin: 200px auto 40px auto;
+    padding: 20px;
     box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
 }
 
+.webfont {
+    font-weight: bold;
+    font-family: 'Dokdo', cursive;
+    color: #ff9800;
+    font-size: 1.5em;
+}
+
+/* 테이블 스타일 */
 table {
     width: 95%;
-    max-width: 900px;
-    margin: 10px auto;
+    max-width: 880px;
+    margin: 28px auto 0 auto;
     border: 1px solid #ccc;
     border-collapse: collapse;
-    table-layout: fixed;
-    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.09);
 }
 
 col.col1 {
@@ -148,8 +126,8 @@ col.col2 {
 }
 
 col.col3 {
-    width: auto;
     min-width: 130px;
+    width: auto;
 }
 
 col.col4 {
@@ -157,13 +135,12 @@ col.col4 {
 }
 
 th {
-    background-color: #f8f9fa;
+    background: #f8f9fa;
     font-weight: bold;
 }
 
 th,
 td {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
@@ -181,10 +158,22 @@ a:focus {
     outline: 2px solid #007bff;
 }
 
-.webfont {
-    font-weight: bold;
-    font-family: 'Dokdo', cursive;
-    color: #ff9800;
-    letter-spacing: 0.5px;
+.spacer {
+    height: 400px;
+    /* 포지셔닝 테스트용 공백 */
 }
 
+/* 반응형 디자인 */
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+}
